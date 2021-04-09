@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Form = ({ item, setItem, list, setList }) => {
+const Form = ({ item, setItem, lists, setList }) => {
     const itemHandler = (e) => {
         console.log(e.target.value);
         setItem(e.target.value);
@@ -9,7 +9,7 @@ const Form = ({ item, setItem, list, setList }) => {
     const submitHandler = (e) => {
         e.preventDefault();
         setList([
-            ...list, {text: item, completed: false, id: Math.random() * 1000}
+            ...lists, {text: item, completed: false, id: Math.random() * 1000}
         ]);
         setItem('');
     };

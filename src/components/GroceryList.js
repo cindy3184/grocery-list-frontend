@@ -1,12 +1,12 @@
 import React from 'react';
 import GroceryItem from './GroceryItem'
 
-const GroceryList = ({ list }) => {
+const GroceryList = ({ lists, setList }) => {
     return(
         <div className="grocery">
             <ul className="grocery-list">
-                {list.map(list => (
-                    <GroceryItem text={list.text} />
+                {lists.map((list) => (
+                    <GroceryItem setList={setList} lists={lists} key={list.id} text={list.text} list={list} />
                 ))}
             </ul>
         </div>

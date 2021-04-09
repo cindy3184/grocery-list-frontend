@@ -6,7 +6,7 @@ import GroceryList from './components/GroceryList'
 function App() {
 // [value, function that allows you to change value]
   const [item, setItem] = useState('');
-  const [list, setList] = useState([]);
+  const [lists, setList] = useState([]);
 
   return (
     <div className='App'>
@@ -16,12 +16,12 @@ function App() {
       {/* passed setItem into the form.js AKA PROPS*/}
       <Form 
         item={item} 
-        list={list} 
+        lists={lists} 
         setList={setList} 
         setItem={setItem} 
       /> 
 
-      <GroceryList list={list} />
+      <GroceryList setList={setList} lists={lists} />
     </div>
   );
 }
