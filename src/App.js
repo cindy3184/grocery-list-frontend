@@ -20,8 +20,8 @@ function App() {
         setList={setList} 
         setItem={setItem} 
       /> 
-      
-      <GroceryList />
+
+      <GroceryList list={list} />
     </div>
   );
 }
