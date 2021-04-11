@@ -1,12 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Form from './components/Form';
 import GroceryList from './components/GroceryList'
 
-function App() {
+
+
+
+
+
+
+
+export default function App() {
 // [value, function that allows you to change value]
   const [item, setItem] = useState('');
   const [lists, setList] = useState([]);
+
+  async function getAppData() {
+    const BASE_URL = 'http://localhost:3001/api/items';
+    const items = await fetch(BASE_URL).then(res => res.json());
+    setItem((prevState) => ({
+      items,
+      ...prevState
+    }))
+  }
+
+  useEffect(() => {
+    getAppData();
+  }, []);
+
 
   return (
     <div className='App'>
@@ -24,6 +45,7 @@ function App() {
       <GroceryList setList={setList} lists={lists} />
     </div>
   );
+
+
 }
 
-export default App;
