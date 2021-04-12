@@ -6,11 +6,11 @@ const GroceryItem = ({ text, list, lists, setList }) => {
         setList(lists.filter((element) => element.id !== list.id));
     };
     return(
-        <div className='grocery'>
-            <li className='grocery-item'>{text}</li>
+        <div className='grocery-container'>
+            <li className='grocery-item'>{text}
             <button className="complete-btn"><i className='fas fa-check'></i></button>
             <button onClick={deleteHandler} className="delete-btn"><i className='fas fa-trash'></i></button>
-
+            </li>
         </div>
 
     );

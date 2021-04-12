@@ -19,8 +19,8 @@ export default function App() {
     const BASE_URL = 'http://localhost:3001/api/items';
     const items = await fetch(BASE_URL).then(res => res.json());
     setItem((prevState) => ({
+      ...prevState,
       items,
-      ...prevState
     }))
   }
 
@@ -28,6 +28,8 @@ export default function App() {
     getAppData();
   }, []);
 
+  
+  
 
   return (
     <div className='App'>
