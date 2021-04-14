@@ -10,7 +10,7 @@ const GroceryItem = ({ text, list, lists, setList }) => {
         <div className='grocery-container'>
             <li className='grocery-item'>{text}
             <button onClick={deleteHandler} className="delete-btn"><i className='fas fa-trash'></i></button>
-            <button className="complete-btn"><i className='fas fa-check'></i></button>
+            {/* <button className="complete-btn"><i className='fas fa-check'></i></button> */}
             </li>
         </div>
 

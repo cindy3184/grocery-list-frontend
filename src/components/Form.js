@@ -8,13 +8,22 @@ const Form = ({ item, setItem, lists, setList }) => {
 
     const submitHandler = (e) => {
         e.preventDefault();
+            const postURL = "http://localhost:3001/api/items/" //Our previously set up route in the backend
+            fetch(postURL, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ 
+                    item: item
+                })
+            })
         setList([
             ...lists, {text: item, completed: false, id: Math.random() * 1000}
         ]);
         setItem('');
 
-        
-        
     };
 
     return(
