@@ -16,7 +16,7 @@ export default function App() {
   const [lists, setList] = useState([]);
 
   async function getAppData() {
-    const BASE_URL = 'http://localhost:3001/api/items';
+    const BASE_URL = 'https://grocery-back.herokuapp.com/api/items';
     const items = await fetch(BASE_URL).then(res => res.json());
     setItem((prevState) => ({
       ...prevState,

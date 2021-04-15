@@ -8,7 +8,7 @@ const Form = ({ item, setItem, lists, setList }) => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-            const postURL = "http://localhost:3001/api/items/" //Our previously set up route in the backend
+            const postURL = "https://grocery-back.herokuapp.com/api/items/" //Our previously set up route in the backend
             fetch(postURL, {
                 method: 'POST',
                 headers: {
