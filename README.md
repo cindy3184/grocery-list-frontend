@@ -16,7 +16,7 @@ An app that allows the user to create a list of groceries.
 [click here](https://grocery-list-app1.herokuapp.com/) to view project.
 
 # Screenshot
-![homepage](https://i.imgur.com/yeRdtgg.png)
+![homepage](https://i.imgur.com/6k8Dii1.png)
 
 
 
