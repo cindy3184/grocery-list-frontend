@@ -10,13 +10,18 @@ An app that allows the user to create a list of groceries.
 * MongoDB/Mongoose
 * Express
 * React
-* Node
+* Node.js
+* Heroku
+* Netlify
 
 # Getting Started 
 [click here](https://grocery-list-app1.herokuapp.com/) to view project.
 
 # Screenshot
 ![homepage](https://i.imgur.com/6k8Dii1.png)
+
+# Future Enhancements
+* Filter through completed and uncompleted items
 
 
 
